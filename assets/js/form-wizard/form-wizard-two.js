@@ -1,48 +1,34 @@
+"use strict";
+function testAnim() {
+    $('#animation-box').removeClass().addClass('fadeOutLeft animated ').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).addClass('d-none');
+        setProgressBar(current++)
+    });
+    $('#animation2-box').removeClass('d-none');
+    $('.prevBtn').removeClass('d-none');
+};
+var animate_custom = {
+    init: function() {
+        $('.js-triggeraNimation').click(function(e){
+            e.preventDefault();
+            var anim = $('.js-animations').val();
+            testAnim(anim);
+        });
+        $('.js-animations').change(function(){
+            var anim = $(this).val();
+            testAnim(anim);
+        });
+    }
+};
 (function($) {
     "use strict";
-    var fomr_wizard_two = {
-        init: function() {
-            var navListItems = $('div.setup-panel div a'),
-                allWells = $('.setup-content'),
-                allNextBtn = $('.nextBtn');
-            
-            // navListItems.click(function (e) {
-            //     e.preventDefault();
-            //     var $target = $($(this).attr('href')),
-            //         $item = $(this);
-            //     if (!$item.hasClass('disabled')) {
-            //         navListItems.removeClass('btn btn-primary').addClass('btn btn-light');
-            //         $item.addClass('btn btn-primary');
-            //         allWells.hide();
-            //         $target.show();
-            //         $target.find('input:eq(0)').focus();
-            //     }
-            // }), 
-            allNextBtn.click(function(){
-                allWells.hide();
-                var curStep = $(this).closest(".setup-content"),
-                    curStepBtn = curStep.attr("id"),
-                    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                    curInputs = curStep.find("input[type='text'],input[type='url']"),
-                    isValid = true;
-                $(".form-group").removeClass("has-error");
-                for(var i=0; i<curInputs.length; i++){
-                    if (!curInputs[i].validity.valid){
-                        isValid = false;
-                        $(curInputs[i]).closest(".form-group").addClass("has-error");
-                    }
-                }
-                if (isValid)
-                    nextStepWizard.removeAttr('disabled').trigger('click');
-                    var $target = $($(this).attr('href')),
-                    $item = $(this);
-                    allWells.hide();
-                    $target.show();
-            }), $('div.setup-panel div a.btn-primary').trigger('click');
-        }
-    };
-    (function($) {
-        "use strict";
-        fomr_wizard_two.init();
-    })(jQuery);
+    animate_custom.init()
 })(jQuery);
+var current=1;
+var steps = $(".animation-box").length;
+function setProgressBar(curStep){
+            var percent = parseFloat(100 / steps) * curStep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+              .css("width",percent+"%")   
+        }
