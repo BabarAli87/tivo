@@ -243,11 +243,11 @@ p {
 
 /*Animated Progress Bar*/
 .progress {
-	height: 20px;
+	height: 10px;
 }
 
 .progress-bar {
-	background-color: #5c61f2;
+	background-color: #f3ff9b;
 }
 
 /*Fit image in bootstrap div*/
@@ -262,6 +262,10 @@ p {
 .arrow-left{
     margin-bottom: -7px;
     margin-right: 6px;
+}
+.submit-icon{
+    margin-bottom: -7px;
+    margin-left: 10px;
 }
 .refresh-icon{
     margin-bottom: -7px;
