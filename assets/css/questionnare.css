@@ -146,7 +146,7 @@ body a {
 }
 .multisteps-form__title{
   font-weight: 100;
-  font-size: 18px;
+  font-size: 14px;
 }
 .multisteps-form__panel {
   position: absolute;
@@ -256,11 +256,11 @@ body a {
  }
  .bi-close-icon:hover{
  
-    color: #f3ff9b;;
+    color: #5F5673;;
  }
  .bi-files:hover{
  
-    color: #f3ff9b;;
+    color: #5F5673;
  }
  .answer-list h5{
   font-size: 18px;
@@ -309,6 +309,11 @@ body a {
   max-height: calc(100vh - 85px);
   overflow-y: scroll;
  }
+ .custom-scroll{
+  max-height: 300px;
+  overflow-y: auto;
+ }
+
  @media screen and (max-width:992px) {
   .btn-toggle{
     display: block;
@@ -319,7 +324,7 @@ body a {
  }
  @media screen and (max-height:610px) {
   .multisteps-form__panel.js-active {
-    height: 500px;
+    height: 525px;
     
   }
 
@@ -334,5 +339,27 @@ body a {
   .answer-btn{
     right: 72px;
     top: 13%;
+  }
+ }
+ @media screen and (max-height:570px) {
+  .multisteps-form__panel.js-active {
+    max-height: 450px;
+    
+  }
+  .custom-scroll{
+    max-height: 200px;
+   }
+ }
+ @media screen and (max-height:497px) {
+  .multisteps-form__panel.js-active {
+    max-height: 400px;
+    
+  }
+  .custom-scroll{
+    max-height: 170px;
+   }
+   .answer-btn{
+    right: 72px;
+    top: 17%;
   }
  }

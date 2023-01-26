@@ -89,7 +89,13 @@ const setActivePanel = activePanelNum => {
       
     }
   })
-  
+  $(".js-active").prevAll().each(function() {
+    $(this).attr("data-animation","slideHorzrev")
+  })
+
+  $(".js-active").nextAll().each(function() {
+    $(this).attr("data-animation","slideHorz")
+  })
 };
 
 //set form height equal to current panel height
@@ -129,7 +135,7 @@ const setFormHeight = () => {
 
 //PREV/NEXT BTNS CLICK
 DOMstrings.stepsForm.addEventListener('click', e => {
-  
+ 
   const eventTarget = e.target;
   
   //check if we clicked on `PREV` or NEXT` buttons
@@ -146,13 +152,14 @@ DOMstrings.stepsForm.addEventListener('click', e => {
   //set active step and active panel onclick
   if(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
     activePanelNum--;
-    setAnimationType("slideHorzrev");
-    setProgressBar(DOMstrings.current--)
+    
+    //setAnimationType("slideHorzrev");
+    setProgressBar(--DOMstrings.current)
   } else {
     
     activePanelNum++;
-    setAnimationType("slideHorz");
-    setProgressBar(DOMstrings.current++)
+   // setAnimationType("slideHorz");
+    setProgressBar(++DOMstrings.current)
   }
   
   setActiveStep(activePanelNum);
@@ -168,6 +175,7 @@ DOMstrings.stepsForm.addEventListener('click', e => {
 
 //changing animation via animation select !!!YOU DON'T NEED THIS CODE (if you want to change animation type, just change form panels data-attr)
 function setProgressBar(curStep){
+  console.log(curStep);
   var percent = parseFloat(100 / DOMstrings.stepFormPanels.length) * curStep;
   percent = percent.toFixed();
   

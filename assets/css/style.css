@@ -13691,7 +13691,7 @@ p.data-attributes svg {
   min-height: 16px;
 }
 .dashboard-default .profile-greeting {
-  background-image: url("../images/dashboard/default/bg-cover.png");
+  /* background-image: url("../images/dashboard/default/bg-cover.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13963,7 +13963,7 @@ p.data-attributes svg {
   .greeting-user
   ul.vector-image
   li:nth-child(3) {
-  top: -60%;
+  top: -12%;
   left: 38%;
   -webkit-animation: move2 1.2s infinite alternate;
   animation: move2 1.2s infinite alternate;
@@ -13973,7 +13973,7 @@ p.data-attributes svg {
   .greeting-user
   ul.vector-image
   li:nth-child(4) {
-  top: -40%;
+  top: -2%;
   right: 25%;
   -webkit-animation: move1 8s linear infinite;
   animation: move1 8s linear infinite;
