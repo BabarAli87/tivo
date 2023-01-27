@@ -158,4 +158,21 @@ $(document).ready(function () {
         $(".sidebar-wrapper").addClass("close_icon");
         $(".page-header").addClass("close_icon"); 
     }
+   
 });
+const div = document.getElementById('wraper-form');
+let output = document.getElementById("form-count");
+function duplicateForm() {
+   
+    console.log(output)
+    let result = Number(output.innerText) + 1;
+    output.innerText = result;
+    let buttons = div.getElementsByClassName('add-temp');
+    let firstBtn=buttons[0];
+    let btnclone=firstBtn.cloneNode(true)
+    let forms = div.getElementsByClassName('temp-form');
+    let firstForm = forms[0];
+    let formClone = firstForm.cloneNode(true);
+    div.appendChild(formClone);
+    div.appendChild(btnclone);
+  }

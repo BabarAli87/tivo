@@ -313,7 +313,7 @@ body a {
   max-height: 300px;
   overflow-y: auto;
  }
-
+.ml-2{margin-left: 10px;}
  @media screen and (max-width:992px) {
   .btn-toggle{
     display: block;

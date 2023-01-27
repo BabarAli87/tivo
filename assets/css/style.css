@@ -23376,7 +23376,7 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  bottom: -40px;
+  bottom: -63px;
   left: 0;
   right: 0;
 }
@@ -47790,5 +47790,14 @@ html[dir="rtl"]
 }
 .lan-111{
   color: #fff;
+}
+.logo-gen{
+  width: 120px;
+}
+.review-letter{
+  margin-top: -45px;
+}
+.GenAi{
+  margin-left: -25px;
 }
 /*# sourceMappingURL=style.css.map */

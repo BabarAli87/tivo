@@ -47814,5 +47814,8 @@
     display: block !important;
     justify-content: flex-end;
    }
+   .min-hi{
+    min-height: 132px;
+   }
   /*# sourceMappingURL=style.css.map */
   
