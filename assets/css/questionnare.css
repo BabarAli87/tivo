@@ -313,7 +313,28 @@ body a {
   max-height: 300px;
   overflow-y: auto;
  }
+ .logo-hover:hover{
+  color: #2b2a2a;
+ }
+ .last-form-btns{
+  padding: 0.6rem 1.5rem;
+ }
+ .button-row{
+  flex-wrap: wrap;
+ }
 .ml-2{margin-left: 10px;}
+ @media screen and (max-width:1220px) {
+  .last-form-btns{
+    padding: 0.6rem 1.3rem;
+   }
+  
+ }
+ @media screen and (max-width:1165px) {
+  .last-form-btns{
+    margin-top: 8px;
+   }
+  
+ }
  @media screen and (max-width:992px) {
   .btn-toggle{
     display: block;
@@ -321,21 +342,25 @@ body a {
    .side-bar{
     display: none;
    }
+  
  }
  @media screen and (max-height:610px) {
   .multisteps-form__panel.js-active {
     height: 525px;
     
   }
-
+  .main{
+    padding: 30px 0px;
+  
+    }
  }
 
  
  @media screen and (max-width:767px) {
-  .main{
+  /* .main{
   padding: 30px 45px;
 
-  }
+  } */
   .answer-btn{
     right: 72px;
     top: 13%;
@@ -352,7 +377,7 @@ body a {
  }
  @media screen and (max-height:497px) {
   .multisteps-form__panel.js-active {
-    max-height: 400px;
+    max-height: 430px;
     
   }
   .custom-scroll{

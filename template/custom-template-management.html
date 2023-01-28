@@ -12,7 +12,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon/favicon.png" type="image/x-icon">
-    <title>Tivo - Premium Admin Template</title><link rel="preconnect" href="https://fonts.googleapis.com/">
+    <title>GenAI - custom-template-management</title><link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/font-awesome.css">
@@ -105,7 +105,8 @@
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
                 <div>
-                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt=""></a>
+                    <div class="logo-wrapper"><a class="d-flex  align-items-center logo-hover" href="admin-dashboard.html"><img class="logo-gen" src="../assets/images/GenAi-logo.png">
+                        <span class="GenAi"><h2>GenAI</h2></span></a>
                         <div class="back-btn"><i data-feather="grid"></i></div>
                         <div class="toggle-sidebar icon-box-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
                     </div>
@@ -121,15 +122,15 @@
                                     <li class="menu-box"> 
                                         <ul>
                                             <li class="sidebar-list">
-                                              <a class="sidebar-link sidebar-title active" href="questionnare.html">
+                                              <a class="sidebar-link sidebar-title active" href="admin-dashboard.html">
                                                 <i data-feather="home"></i><span class="">Dashboard</span>
                                               </a>
                                             </li>
-                                            <li class="sidebar-list">
+                                            <!-- <li class="sidebar-list">
                                                 <a class="sidebar-link sidebar-title active" href="admin-dashboard.html">
                                                   <i data-feather="help-circle"></i><span class="">questionnare</span>
                                                 </a>
-                                              </li>
+                                              </li> -->
                                             <li class="sidebar-list">
                                               <a class="sidebar-link sidebar-title" href="user-management.html">
                                                 <i data-feather="users"></i><span class="">User Management</span>
@@ -162,7 +163,7 @@
                                     <h3>Custom template management</h3>
                                 </div>
                                 <div class="col-sm-6 d-flex justify-content-end">
-                                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#AddNewTemplateModal">Add new</button>
+                                    <button class="btn btn-blck btn-sm" data-bs-toggle="modal" data-bs-target="#AddNewTemplateModal">Add new</button>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +234,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleFormControlInput1">Answer1</label>
-                                        <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="" data-bs-original-title="" title="">
+                                        <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="" data-bs-original-title="" title="">
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +250,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label class="form-label" for="exampleFormControlInput1">Answer 3</label>
-                                        <input class="form-control" id="exampleFormControlInput1" type="number" placeholder="" data-bs-original-title="" title="">
+                                        <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="" data-bs-original-title="" title="">
                                     </div>
                                 </div>
                             </div>
@@ -258,19 +259,48 @@
                                     <div class="mb-3">
                                         <div class="mb-3">
                                             <label class="form-label" for="exampleFormControlInput1">Answer 4</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="number" placeholder="" data-bs-original-title="" title="">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" placeholder="" data-bs-original-title="" title="">
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <button class="btn btn-primary" onclick="duplicateForm()">Add New</button> -->
+                                
                             </div>
                             
                         </form>
-                        <button class="btn btn-primary add-temp" onclick="duplicateForm()">Add New</button>
+                        <form action="" class="form theme-form temp-form">
+                            <h5 class="mt-2">Tag <span id="form-count1">1</span></h5>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label>Describe Question? </label>
+                                        <textarea class="form-control multisteps-form__input form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                        </form>
+
+
+                        <button class="btn btn-blck add-temp" onclick="duplicateForm()">Add New</button>
+                        <button class="btn btn-blck  add-tag" id="tag-btn" onclick="duplicateTag()">Add Tag</button>
+                        <form action="" class="form theme-form temp-form">
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="exampleFormControlInput1">Upload</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="file" placeholder="" data-bs-original-title="" title="">
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" type="button">Save changes</button>
+                        <button class="btn btn-blck" type="button">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -288,7 +318,7 @@
                 </div>
                 <div class="modal-footer">
                   <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">No</button>
-                  <button class="btn btn-primary" type="button">Yes</button>
+                  <button class="btn btn-blck" type="button">Yes</button>
                 </div>
               </div>
             </div>
@@ -338,7 +368,8 @@
         <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
         <!-- Template js-->
         <script src="../assets/js/script.js"></script>
-        <script src="../assets/js/theme-customizer/customizer.js">  </script>
+        <script src="../assets/js/cutom-template.js"></script>
+        <!-- <script src="../assets/js/theme-customizer/customizer.js">  </script> -->
         <!-- login js-->
     </body>
     <!-- Mirrored from admin.pixelstrap.com/tivo/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Jan 2023 09:36:24 GMT -->
