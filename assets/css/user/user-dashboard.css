@@ -23348,7 +23348,7 @@
     background-color: rgba(92, 97, 242, 0.05);
   }
   .pricing-block .pricing-header h2 {
-    color: #5c61f2;
+    color: #141313;
     font-weight: 600;
     font-size: 30px;
     text-transform: uppercase;
@@ -23358,7 +23358,7 @@
     font-size: 50%;
   }
   .pricing-block .pricing-header .price-box {
-    background-color: #5c61f2;
+    background-color: #141313;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -23376,7 +23376,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
-    bottom: -40px;
+    bottom: -62px;
     left: 0;
     right: 0;
   }
@@ -28808,7 +28808,7 @@
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  .page-wrapper.compact-wrapper
+  /* .page-wrapper.compact-wrapper
     .page-body-wrapper
     div.sidebar-wrapper
     .sidebar-main
@@ -28826,7 +28826,7 @@
     stroke: #fff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
+  } */
   .page-wrapper.compact-wrapper
     .page-body-wrapper
     div.sidebar-wrapper
@@ -29681,7 +29681,7 @@
     > li
     .sidebar-link.active
     span {
-    color:#141313;
+    color: #141313;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -47814,12 +47814,17 @@
     display: block !important;
     justify-content: flex-end;
    }
-  
-  .logo-gen{
+   .min-hi{
+    min-height: 132px;
+   }
+   .logo-gen{
     width: 120px;
     margin-left: -45px;
   }
- 
+  .pricing-block {
+    overflow: hidden;
+    min-height: 420px;
+  }
   .GenAi{
     margin-left: -25px !important;
   }
@@ -47833,11 +47838,11 @@
     background-color: #000000;
     color: #fff;
    }
-    .btn-blck:hover{
-  background-color: #5F5673;
-  color: #fff;
- }
- .heading-color{
+   .btn-blck:hover{
+    background-color: #5F5673;
+    color: #fff;
+   }
+   .heading-color{
   color: #141313 !important;
 }
   /*# sourceMappingURL=style.css.map */

@@ -323,6 +323,28 @@ body a {
   flex-wrap: wrap;
  }
 .ml-2{margin-left: 10px;}
+.tooltipcus {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltipcus .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltipcus:hover .tooltiptext {
+  visibility: visible;
+}
  @media screen and (max-width:1220px) {
   .last-form-btns{
     padding: 0.6rem 1.3rem;
