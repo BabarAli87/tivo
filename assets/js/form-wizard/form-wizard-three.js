@@ -36,15 +36,15 @@ function bar_progress(progress_line_object, direction) {
     	var next_step = true;
         var current_active_step = $(this).parents('.f1').find('.f1-step.active');
     	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
-    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
+    	// parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
+    	// 	if( $(this).val() == "" ) {
+    	// 		$(this).addClass('input-error');
+    	// 		next_step = false;
+    	// 	}
+    	// 	else {
+    	// 		$(this).removeClass('input-error');
+    	// 	}
+    	// });
     	if( next_step ) {
     		parent_fieldset.fadeOut(400, function() {
     			current_active_step.removeClass('active').addClass('activated').next().addClass('active');

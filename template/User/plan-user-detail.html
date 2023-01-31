@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from admin.pixelstrap.com/tivo/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Jan 2023 09:37:13 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="tivo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Tivo admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../../assets/images/favicon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon/favicon.png" type="image/x-icon">
+    <title>GenAI - plan-user-details</title><link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/scrollbar.css">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+      <link rel="stylesheet" type="text/css" href="../../assets/css/user/user-dashboard.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"> -->
+    <link id="color" rel="stylesheet" href="../../assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/responsive.css">
+  </head>
+  <body>
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"> </div>
+      <div class="dot"></div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+      <!-- Page Header Start-->
+      
+         <div class="page-header">
+        <div class="header-wrapper row m-0">
+          <form class="form-inline search-full col" action="#" method="get">
+            <div class="form-group w-100">
+              <div class="Typeahead Typeahead--twitterUsers">
+                <div class="u-posRelative">
+                  <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Tivo .." name="q" title="" autofocus>
+                  <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div><i class="close-search" data-feather="x"></i>
+                </div>
+                <div class="Typeahead-menu"></div>
+              </div>
+            </div>
+          </form>
+          <div class="header-logo-wrapper col-auto p-0">
+            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+            <div class="logo-header-main"><a href="user-dashboard.html"><img class="img-fluid for-light img-100" src="../../assets/images/logo/logo2.png" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/logo.png" alt=""></a></div>
+          </div>
+          <div class="nav-right col pull-right right-header p-0">
+            <ul class="nav-menus">
+              
+              <li class="profile-nav onhover-dropdown">
+                <div class="account-user"><i data-feather="user"></i></div>
+                <ul class="profile-dropdown onhover-show-div">
+                  <li><a href="user-profile.html"><i data-feather="user"></i><span>Account</span></a></li>
+                  <li><a href="email_inbox.html"><i data-feather="mail"></i><span>Inbox</span></a></li>
+                  <li><a href="edit-profile.html"><i data-feather="settings"></i><span>Settings</span></a></li>
+                  <li><a href="login.html"><i data-feather="log-in"> </i><span>Log in</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+              <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+              <div class="ProfileCard-details">
+                <div class="ProfileCard-realName">{{name}}</div>
+              </div>
+            </div>
+          </script>
+          <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
+        </div>
+      </div>
+      <!-- Page Header Ends-->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper">
+        <!-- Page Sidebar Start-->
+        <div class="sidebar-wrapper">
+          <div>
+            <div class="logo-wrapper"><a class="d-flex  align-items-center logo-hover" href="admin-dashboard.html"><img class="logo-gen" src="../../assets/images/GenAi-logo.png">
+              <span class="GenAi"><h2>GenAI</h2></span></a>
+              <div class="back-btn"><i data-feather="grid"></i></div>
+              <div class="toggle-sidebar icon-box-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+            </div>
+            <div class="logo-icon-wrapper"><a href="user-dashboard.html">
+              <div class="icon-box-sidebar"><i data-feather="grid"></i></div></a></div>
+              <nav class="sidebar-main">
+                <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                <div id="sidebar-menu">
+                  <ul class="sidebar-links" id="simple-bar">
+                    <li class="back-btn">
+                      <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                    </li>
+                    <li class="menu-box"> 
+                      <ul>
+                        <li class="sidebar-list">
+                          <a class="sidebar-link sidebar-title active" href="user-dashboard.html">
+                            <i data-feather="home"></i><span class="">Dashboard</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-list">
+                          <a class="sidebar-link sidebar-title active" href="questionnare.html">
+                            <i data-feather="help-circle"></i><span class="">questionnare</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-list">
+                          <a class="sidebar-link sidebar-title" href="Templates.html">
+                            <i data-feather="hash"></i><span class="">Templates</span>
+                          </a>
+                        </li>
+                        <li class="sidebar-list">
+                          <a class="sidebar-link sidebar-title" href="Templates.html">
+                            <i data-feather="dollar-sign"></i><span class="">Pricing</span>
+                          </a>
+                        </li>
+  
+                   
+                      </ul>
+                    </div>
+                    <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+                  </nav>
+                </div>
+              </div>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body  checkout">
+          <div class="container-fluid">
+            <div class="page-title mt-2 pb-2">
+              <div class="row ">
+                <div class="col-sm-6 ">
+                  <h3>Checkout</h3>
+                </div>
+                <div class="col-sm-6 ">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="user-dashboard.html">                                       <i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item">Pricing</li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+           <div class="row justify-content-center">
+             <div class="col-lg-12 ">
+                <div class="card">
+                    <div class="card-header pb-0">
+                      <h4>Billing Details</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                          <form>
+                            <div class="row">
+                              <div class="mb-3 col-sm-6">
+                                <label for="inputEmail4">First Name</label>
+                                <input class="form-control" id="inputEmail4" type="email">
+                              </div>
+                              <div class="mb-3 col-sm-6">
+                                <label for="inputPassword4">Last Name</label>
+                                <input class="form-control" id="inputPassword4" type="password">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="mb-3 col-sm-6">
+                                <label for="phonenumber">Phone</label>
+                                <input class="form-control" id="phonenumber" type="number">
+                              </div>
+                              <div class="mb-3 col-sm-6">
+                                <label for="inputPassword7">Email Address</label>
+                                <input class="form-control" id="inputPassword7" type="email">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputState">Country</label>
+                              <select class="form-control" id="inputState">
+                                <option selected="">Choose...</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputAddress5">Address</label>
+                              <input class="form-control" id="inputAddress5" type="text">
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputCity">Town/City</label>
+                              <input class="form-control" id="inputCity" type="text">
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputAddress2">State/Country</label>
+                              <input class="form-control" id="inputAddress2" type="text">
+                            </div>
+                            <div class="mb-3">
+                              <label for="inputAddress6">Postal Code</label>
+                              <input class="form-control" id="inputAddress6" type="number">
+                            </div>
+                            <div class="mb-3">
+                              <div class="form-check">
+                                <input class="form-check-input" id="gridCheck" type="checkbox">
+                                <label class="form-check-label" for="gridCheck">Check me out</label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                          <div class="checkout-details">
+                            <div class="order-box">
+                              <div class="title-box">
+                                <div class="checkbox-title">
+                                  <h4 class="mb-0">Product </h4><span>Total</span>
+                                </div>
+                              </div>
+                              <ul class="qty">
+                                <li>Basic × 1 <span>$25.10</span></li>
+                                
+                              </ul>
+                             
+                              <div class="animate-chk">
+                                <div class="row">
+                                  <div class="col">
+                                    <!-- <label class="d-block" for="edo-ani">
+                                      <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani" checked="" data-original-title="" title="">Check Payments
+                                    </label>
+                                    <label class="d-block" for="edo-ani1">
+                                      <input class="radio_animated" id="edo-ani1" type="radio" name="rdo-ani" data-original-title="" title="">Cash On Delivery
+                                    </label> -->
+                                    <label class="d-block" for="edo-ani2">
+                                      <input class="radio_animated" id="edo-ani2" type="radio" name="rdo-ani" checked="" data-original-title="" title="">Stripe<img class="img-paypal" src="../../assets/images/checkout/paypal.png" alt="">
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="order-place"><a class="btn btn-blck" href="card-details.html">Place Order  </a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+             </div>   
+           </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+      
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="../../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../../assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/sidebar-menu.js"></script>
+    <!-- Template js-->
+    <script src="../../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/theme-customizer/customizer.js">  </script> -->
+    <!-- login js-->
+  </body>
+
+<!-- Mirrored from admin.pixelstrap.com/tivo/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Jan 2023 09:37:13 GMT -->
+</html>

@@ -13691,7 +13691,7 @@ p.data-attributes svg {
   min-height: 16px;
 }
 .dashboard-default .profile-greeting {
-  background-image: url("../images/dashboard/default/bg-cover.png");
+  /* background-image: url("../images/dashboard/default/bg-cover.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13963,7 +13963,7 @@ p.data-attributes svg {
   .greeting-user
   ul.vector-image
   li:nth-child(3) {
-  top: -60%;
+  top: -12%;
   left: 38%;
   -webkit-animation: move2 1.2s infinite alternate;
   animation: move2 1.2s infinite alternate;
@@ -13973,7 +13973,7 @@ p.data-attributes svg {
   .greeting-user
   ul.vector-image
   li:nth-child(4) {
-  top: -40%;
+  top: -2%;
   right: 25%;
   -webkit-animation: move1 8s linear infinite;
   animation: move1 8s linear infinite;
@@ -22668,8 +22668,8 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto;
-  background: url("../images/login/login_bg.jpg");
-  padding: 30px 12px;
+  background-color:#f6f8fc; 
+  padding: 6px 12px;
 }
 .login-card .logo {
   display: block;
@@ -22801,14 +22801,14 @@ footer {
 .login-card .login-main .theme-form ul.login-social li svg {
   width: auto;
   height: 16px;
-  color: #5c61f2;
+  color: #141313;
   vertical-align: middle;
 }
 .login-card .login-main .theme-form ul.login-social li:nth-child(n + 2) {
   margin-left: 15px;
 }
 .login-card .login-main .theme-form ul.login-social li:hover {
-  background-color: #5c61f2;
+  background-color: #141313;
 }
 .login-card .login-main .theme-form ul.login-social li:hover svg {
   color: #fff;
@@ -22823,7 +22823,7 @@ footer {
 .show-hide span {
   cursor: pointer;
   font-size: 13px;
-  color: var(--theme-deafult);
+  color: #141313;
 }
 .show-hide span.show:before {
   content: "show";
@@ -23332,6 +23332,7 @@ footer {
 }
 .pricing-block {
   overflow: hidden;
+  min-height: 420px;
 }
 .pricing-block .pricing-header {
   position: relative;
@@ -23376,7 +23377,7 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  bottom: -40px;
+  bottom: -63px;
   left: 0;
   right: 0;
 }
@@ -26547,9 +26548,9 @@ footer {
 }
 .page-wrapper .page-header .header-wrapper {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: block;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -27514,7 +27515,7 @@ footer {
   ul.sidebar-submenu
   li
   a:hover:after {
-  background-color: #fff;
+  background-color: #141313;
 }
 .page-wrapper.horizontal-wrapper
   .page-body-wrapper
@@ -28841,7 +28842,7 @@ footer {
   > li:hover
   .sidebar-link:not(.active):hover
   span {
-  color: #fff;
+  color: #141313;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -29799,7 +29800,7 @@ footer {
 }
 @media screen and (max-width: 1470px) {
   .page-wrapper .page-header .header-wrapper .nav-right > ul > li:first-child {
-    width: 210px !important;
+    width: 44px !important;
   }
   .left-header .left-menu-header ul.header-left li:nth-child(n + 2)::before {
     display: none;
@@ -47791,4 +47792,32 @@ html[dir="rtl"]
 .lan-111{
   color: #fff;
 }
+.logo-gen{
+  width: 120px;
+  margin-left: -45px;
+}
+.review-letter{
+  margin-top: -45px;
+}
+.GenAi{
+  margin-left: -25px !important;
+}
+.logo-hover{
+  color: #000000;
+}
+.logo-hover:hover{
+  color: #000000;
+}
+.heading-color{
+  color: #141313 !important;
+}
+.btn-blck{
+  background-color: #000000;
+  color: #fff;
+ }
+ .btn-blck:hover{
+  background-color: #5F5673;
+  color: #fff;
+ }
+
 /*# sourceMappingURL=style.css.map */
