@@ -159,7 +159,7 @@ body a {
   /* border-radius: 20px; */
 }
 .multisteps-form__panel.js-active {
-  height: 570px;
+  height: 460px;
   opacity: 1;
   visibility: visible;
   
@@ -310,7 +310,7 @@ body a {
   overflow-y: scroll;
  }
  .custom-scroll{
-  max-height: 300px;
+  max-height: 210px;
   overflow-y: auto;
  }
  .logo-hover:hover{
