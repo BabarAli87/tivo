@@ -196,3 +196,17 @@ animationSelect.addEventListener('change', () => {
   
   setAnimationType(newAnimationType);
 });
+
+function showPlanSide(){
+  let planSide=document.getElementById("plan-side");
+  let answerSide=document.getElementById("answer-side");
+  answerSide.classList.add("d-none");
+  planSide.classList.remove("d-none")
+ 
+}
+function showAnswerSide(){
+  let planSide=document.getElementById("plan-side");
+  let answerSide=document.getElementById("answer-side");
+planSide.classList.add('d-none');
+answerSide.classList.remove("d-none");
+}
